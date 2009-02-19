@@ -1,0 +1,22 @@
+  [4;36;1mSQL (0.000368)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000280)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.005211)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.007572)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000327)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000225)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNoticias (20090219192004)
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004834)[0m   [0mCREATE TABLE "noticias" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "fecha" datetime DEFAULT NULL NULL, "contacto" varchar(255) DEFAULT NULL NULL, "titulo" varchar(255) DEFAULT NULL NULL, "texto" text DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.010646)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090219192004')[0m
+  [4;35;1mSQL (0.000333)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000126)[0m   [0mPRAGMA index_list("noticias")[0m
